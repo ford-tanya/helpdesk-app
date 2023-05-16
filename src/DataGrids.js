@@ -100,6 +100,11 @@ export default function DataGrids() {
           setCreated_time(moment(result.data.created_time).format('DD/MM/YYYY, hh:mm:ss A'));
           setUpdate_time(moment(result.data.update_time).format('DD/MM/YYYY, hh:mm:ss A'));
           setStatus_name(result.data.status_name);
+          
+          //set the values for show in update form
+          setNewTitle(result.data.title);
+          setNewDescription(result.data.description);
+          setNewContact(result.data.contact);
         }
       )
       .catch((error) => {
